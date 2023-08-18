@@ -4,6 +4,12 @@ vim9script
 # Maintainer: Lincoln Gondin <github.com/lincolngondin>
 # License: This file is placed in the public domain.
 
+
+if exists("g:loaded_sessionmanager")
+    finish
+endif
+g:loaded_sessionmanager = 1
+
 if !exists("g:sessions_location")
     g:sessions_location = $HOME .. '/vimfiles/sessions/'
 endif
